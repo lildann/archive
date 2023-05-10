@@ -1,0 +1,14 @@
+<div class="artworks">
+  <div class="container">
+  
+    <% @artworks.each do |artwork| %>
+    <div class="artwork">
+      <p class="title"><%= artwork.title %></p>
+      <p class="year"><%= artwork.year %></p>
+      <p class="medium"><%= artwork.medium %></p>
+      <p class="collection"><%= artwork.collection %></p>
+    </div>
+    <% end %>
+
+  </div>
+</div>
