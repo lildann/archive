@@ -1,11 +1,19 @@
-<section id="artwork_container">
+<section class="artwork_container">
 
+  <div class="artwork_info">
 	<%= form_with model: @artwork do |form| %>
 		<%= form.text_field :title, placeholder: "Title" %>
     <%= form.text_field :year, placeholder: "Year" %>
     <%= form.text_field :medium, placeholder: "Medium" %>
     <%= form.text_field :collection, placeholder: "Collection" %>
   <br>
+  </div>
+
+  <div id="artwork_image">
+    <%= form.label :image %>
+    <%= form.file_field :image%>
+  </div>
+  
   <div id="new_artwork_button">
 	  <%= form.submit 'Add artwork'%>
   </div>

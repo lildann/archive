@@ -3,6 +3,7 @@
   
     <% @artworks.each do |artwork| %>
     <div class="artwork">
+      <p class="image"><%= image_tag(artwork.image) %></p>
       <p class="title"><%= artwork.title %></p>
       <p class="year"><%= artwork.year %></p>
       <p class="medium"><%= artwork.medium %></p>
