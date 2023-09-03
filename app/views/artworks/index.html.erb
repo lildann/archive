@@ -1,14 +1,9 @@
 <div class="artworks">
-  <div class="container">
+  <div class="artwork_container">
   
     <% @artworks.each do |artwork| %>
-    <div class="artwork">
-      <p class="image"><%= image_tag(artwork.image) %></p>
-      <p class="title"><%= artwork.title %></p>
-      <p class="year"><%= artwork.year %></p>
-      <p class="medium"><%= artwork.medium %></p>
-      <p class="collection"><%= artwork.collection %></p>
-    </div>
+    <p class="artwork_image"><%= image_tag(artwork.image) %></p><br>
+    <div class="artwork_info"><p><%= artwork.title %> | <%= artwork.year %> | <%= artwork.medium %> | <%= artwork.collection %></p></div>
     <% end %>
 
   </div>
