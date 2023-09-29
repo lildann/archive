@@ -1,10 +1,12 @@
-<section id="artwork_container">
+
+<section class="update_artwork_container">
 
 	<%= form_with model: @artwork do |form| %>
 		<%= form.text_field :title, placeholder: "Title" %>
     <%= form.text_field :year, placeholder: "Year" %>
     <%= form.text_field :medium, placeholder: "Medium" %>
     <%= form.text_field :collection, placeholder: "Collection" %>
+  <br>
   <br>
   <div id="update_artwork_button">
 	  <%= form.submit 'Update artwork'%>
