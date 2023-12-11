@@ -1,0 +1,51 @@
+<section class="page_container">
+
+<div class="decade"> <h2> 1990s </h2> </div><br>
+  <div class="artwork_container">
+    <% @nineties.each do |artwork| %>
+    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+    <% end %>
+  </div>
+
+
+<div class="decade"> <h2> 1980s </h2> </div><br>
+  <div class="artwork_container">
+    <% @eighties.each do |artwork| %>
+    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+    <% end %>
+  </div>
+
+
+<div class="decade"> <h2> 1970s </h2></div><br>
+  <div class="artwork_container">
+    <% @seventies.each do |artwork| %>
+    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+    <% end %>
+  </div>
+
+
+<div class="decade"> <h2> 1960s </h2></div><br>
+  <div class="artwork_container">
+    <% @sixties.each do |artwork| %>
+    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+    <% end %>
+  </div>
+
+
+<div class="decade"> <h2> 1950s </h2> </div><br>
+  <div class="artwork_container">
+    <% @fifties.each do |artwork| %>
+    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+    <% end %>
+  </div>
+
+
+<div class="decade"> <h2> 1940s </h2> </div><br>
+  <div class="artwork_container">
+    <% @forties.each do |artwork| %>
+    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+    <% end %>
+  </div>
+
+</section>
+
