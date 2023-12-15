@@ -1,5 +1,5 @@
 class ArtworksController < ApplicationController
-  before_action :find_artwork, only: [:show, :edit, :update]
+  before_action :find_artwork, only: [:show, :edit, :update, :destroy]
   
   def index
     @artworks = Artwork.all
@@ -30,6 +30,11 @@ class ArtworksController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @artwork.destroy
+    redirect_to '/artworks'
   end
 
   def home

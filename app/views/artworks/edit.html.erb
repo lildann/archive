@@ -12,5 +12,7 @@
   <div id="update_artwork_button">
 	  <%= form.submit 'Update artwork'%>
   </div>
+  <br>
+  <%= link_to 'Delete artwork', artwork_path(@artwork.id), method: :delete, data: { confirm: "Are you sure you want to delete?" } %>
 	<% end %>
 </section>
