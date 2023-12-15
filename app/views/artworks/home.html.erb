@@ -1,51 +1,58 @@
 <section class="page_container">
 
-<div class="decade"> <h2> 1990s </h2> </div><br>
-  <div class="artwork_container">
+
+<div class="decade"> <h2> 1990s </h2> 
+  <ul>
     <% @nineties.each do |artwork| %>
-    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+    <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
     <% end %>
-  </div>
+  </ul> 
+</div>
 
 
-<div class="decade"> <h2> 1980s </h2> </div><br>
-  <div class="artwork_container">
+<div class="decade"> <h2> 1980s </h2> 
+  <ul>
     <% @eighties.each do |artwork| %>
-    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+      <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
     <% end %>
-  </div>
+  </ul> 
+</div>
 
 
-<div class="decade"> <h2> 1970s </h2></div><br>
-  <div class="artwork_container">
+<div class="decade"> <h2> 1970s </h2>
+  <ul>
     <% @seventies.each do |artwork| %>
-    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+     <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
     <% end %>
-  </div>
+  </ul> 
+</div>
 
 
-<div class="decade"> <h2> 1960s </h2></div><br>
-  <div class="artwork_container">
+<div class="decade"> <h2> 1960s </h2>
+  <ul>
     <% @sixties.each do |artwork| %>
-    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+    <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
     <% end %>
-  </div>
+  </ul> 
+</div>
 
 
-<div class="decade"> <h2> 1950s </h2> </div><br>
-  <div class="artwork_container">
+<div class="decade"> <h2> 1950s </h2>
+  <ul>
     <% @fifties.each do |artwork| %>
-    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+     <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
     <% end %>
-  </div>
+  </ul> 
+</div>
 
 
-<div class="decade"> <h2> 1940s </h2> </div><br>
-  <div class="artwork_container">
+<div class="decade"> <h2> 1940s </h2>
+  <ul>
     <% @forties.each do |artwork| %>
-    <%= image_tag(artwork.image, class: "artwork_image") %><br>
+     <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
     <% end %>
-  </div>
+  </ul> 
+</div>
 
 </section>
 
