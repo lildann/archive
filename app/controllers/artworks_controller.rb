@@ -2,7 +2,7 @@ class ArtworksController < ApplicationController
   before_action :find_artwork, only: [:show, :edit, :update, :destroy]
   
   def index
-    @artworks = Artwork.all
+    @artworks = Artwork.all.order("year DESC")
   end
 
   def new

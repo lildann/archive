@@ -19,19 +19,10 @@
 </div>
 
 
-<div class="decade"> <h2> 1970s </h2>
+<div class="decade"> <h2> Unknown dates </h2> 
   <ul>
     <% @seventies.each do |artwork| %>
-     <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
-    <% end %>
-  </ul> 
-</div>
-
-
-<div class="decade"> <h2> 1960s </h2>
-  <ul>
-    <% @sixties.each do |artwork| %>
-    <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
+      <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
     <% end %>
   </ul> 
 </div>
