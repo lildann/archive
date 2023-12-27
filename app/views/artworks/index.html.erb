@@ -5,7 +5,12 @@
     <%= image_tag(artwork.image, class: "artwork_image") %><br>
   
     <div class="artwork_info">
-    <p><%= artwork.title %> | <%= artwork.year %> | <%= artwork.medium %> | <%= artwork.dimensions %> | <%= artwork.collection %></p>
+    <h3> <%= "#{artwork.title} " %> 
+        <%= "| #{artwork.year} " %>
+        <%= "| #{artwork.medium} " if artwork.medium != "tbc" %>
+        <%= "| #{artwork.dimensions} " if artwork.dimensions != "tbc" %>
+        <%= "| #{artwork.collection}"  if artwork.collection != "" || artwork.collection != "tbc" %>
+    </h3>
     </div>
     <% end %>
   </div>
