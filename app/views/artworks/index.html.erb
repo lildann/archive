@@ -2,8 +2,8 @@
 
   <div class="artwork_container">
     <% @artworks.each do |artwork| %>
-    <%= image_tag(artwork.image, class: "artwork_image") %><br>
-  
+      <%= image_tag(artwork.image, class: "artwork_image", id: "artwork_#{artwork.id}")%><br>
+
     <div class="artwork_info">
     <h3> <%= "#{artwork.title} " %> 
         <%= "| #{artwork.year} " %>
