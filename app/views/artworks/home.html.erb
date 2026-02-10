@@ -5,8 +5,9 @@
   <ul>
     <% @nineties.each do |artwork| %>
     <li>
-      <a href=<%="/artworks#artwork_#{artwork.id}"%>>
-        <figure><%= image_tag(artwork.image, class: "artwork_image", id: "artwork_#{artwork.id}")%></figure>
+      <a href="<%= url_for(artwork.image) %>" class="glightbox" data-gallery="nineties"
+         data-glightbox="title: <%= artwork.title %>; description: <%= artwork.year %>">
+        <figure><%= image_tag(artwork.image, class: "artwork_image", id: "artwork_#{artwork.id}") %></figure>
       </a>
     </li>
     <% end %>
@@ -17,7 +18,12 @@
 <div class="decade"> <h2> 1980-1989 </h2> 
   <ul>
     <% @eighties.each do |artwork| %>
-      <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
+    <li>
+      <a href="<%= url_for(artwork.image) %>" class="glightbox" data-gallery="eighties"
+         data-glightbox="title: <%= artwork.title %>; description: <%= artwork.year %>">
+        <figure><%= image_tag(artwork.image, class: "artwork_image") %></figure>
+      </a>
+    </li>
     <% end %>
   </ul> 
 </div>
@@ -26,7 +32,12 @@
 <div class="decade"> <h2> Unknown dates </h2> 
   <ul>
     <% @seventies.each do |artwork| %>
-      <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
+    <li>
+      <a href="<%= url_for(artwork.image) %>" class="glightbox" data-gallery="seventies"
+         data-glightbox="title: <%= artwork.title %>; description: <%= artwork.year %>">
+        <figure><%= image_tag(artwork.image, class: "artwork_image") %></figure>
+      </a>
+    </li>
     <% end %>
   </ul> 
 </div>
@@ -35,7 +46,12 @@
 <div class="decade"> <h2> 1950s </h2>
   <ul>
     <% @fifties.each do |artwork| %>
-     <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
+    <li>
+      <a href="<%= url_for(artwork.image) %>" class="glightbox" data-gallery="fifties"
+         data-glightbox="title: <%= artwork.title %>; description: <%= artwork.year %> – <%= artwork.medium %>">
+        <figure><%= image_tag(artwork.image, class: "artwork_image") %></figure>
+      </a>
+    </li>
     <% end %>
   </ul> 
 </div>
@@ -44,10 +60,25 @@
 <div class="decade"> <h2> 1940s </h2>
   <ul>
     <% @forties.each do |artwork| %>
-     <li><figure><%= image_tag(artwork.image, class: "artwork_image") %></figure></li>
+    <li>
+      <a href="<%= url_for(artwork.image) %>" class="glightbox" data-gallery="forties"
+         data-glightbox="title: <%= artwork.title %>; description: <%= artwork.year %> – <%= artwork.medium %>">
+        <figure><%= image_tag(artwork.image, class: "artwork_image") %></figure>
+      </a>
+    </li>
     <% end %>
   </ul> 
 </div>
 
 </section>
 
+<script>
+  document.addEventListener('turbolinks:load', function() {
+    GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      closeButton: true
+    });
+  });
+</script>
